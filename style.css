@@ -1,0 +1,190 @@
+/* Base Resets & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b132b;
+    color: #333;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Background Design: Nepal Flag Gradient Colors + Mountain Wallpaper Layer */
+.hero-background {
+    min-height: 100vh;
+    padding-bottom: 50px;
+    position: relative;
+    /* Himal ko abstract feel dina ra background photoko rupma unsplash use gareko */
+    background: linear-gradient(rgba(0, 56, 147, 0.85), rgba(220, 53, 69, 0.85)), 
+                url('https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header Styling */
+.hero-content {
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.hero-content .sub-title {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    font-style: italic;
+    color: #ffc107;
+}
+
+/* Top Intro Section Layout */
+.intro-section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    border-top: 6px solid #dc3545;
+}
+
+.intro-section h2 {
+    color: #003893;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* 3-Column Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+/* Column Cards Styling */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-bottom: 5px solid #ffc107;
+}
+
+.card h2 {
+    color: #dc3545;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Place List Item & Images */
+.place-item {
+    margin-bottom: 20px;
+    background: #fdfdfd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 4px solid #003893;
+}
+
+.place-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.place-item h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.place-item p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Weather Column Specific Styling (Click Info) */
+.weather-intro {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.weather-btn {
+    background: #003893;
+    color: #fff;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.weather-btn:hover {
+    background: #dc3545;
+    transform: translateX(5px);
+}
+
+.weather-info-display {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff3f3;
+    border: 1px dashed #dc3545;
+    border-radius: 8px;
+    min-height: 100px;
+}
+
+.weather-info-display h3 {
+    color: #dc3545;
+    margin-bottom: 8px;
+}
+
+.weather-info-display p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjust for mobile */
+@media(max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}

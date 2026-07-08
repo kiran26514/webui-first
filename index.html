@@ -3,9 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Information About Nepal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+
+    <!-- Hero Background Section (Nepal Flag & Mountain Theme) -->
+    <div class="hero-background">
+        <div class="flag-stripe-top"></div>
+        <div class="flag-stripe-bottom"></div>
+        
+        <!-- Header & Nepal Banner -->
+        <header class="hero-content">
+            <h1>🇳🇵 Information About Nepal 🇳🇵</h1>
+            <p class="sub-title">The Wonderful Journey to Beautiful, Peaceful, and Brave Nepal</p>
+        </header>
+
+        <!-- Nepal Intro Section -->
+        <section class="container intro-section">
+            <h2>About Nepal</h2>
+            <p>Nepal is a beautiful, landlocked country filled with natural wonders. It is home to Mount Everest (Sagarmatha), the highest peak in the world, and Lumbini, the sacred birthplace of Gautama Buddha. The country is globally renowned for its rich culture, breathtaking scenery, meditation, ancient heritage, and extreme adventure tourism.</p>
+        </section>
+
+        <!-- Main 3-Column Layout -->
+        <main class="container main-grid">
+            
+            <!-- Column 1: Places to Visit -->
+            <section class="column card">
+                <h2>📍 Places to Visit</h2>
+                
+                <div class="place-item">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=400&q=80" alt="Kathmandu" class="place-img">
+                    <h3>Kathmandu</h3>
+                    <p>The capital city of Nepal, famous for its historic Durbar Squares, and sacred shrines like Pashupatinath and Swayambhunath.</p>
+                </div>
+
+                <div class="place-item">
+                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=400&q=80" alt="Pokhara" class="place-img">
+                    <h3>Pokhara</h3>
+                    <p>A scenic lakeside city offering breathtaking views of the Annapurna range and Mount Machhapuchhre. It serves as the main gateway for trekking.</p>
+                </div>
+
+                <div class="place-item">
+                    <img src="https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=400&q=80" alt="Muktinath" class="place-img">
+                    <h3>Muktinath</h3>
+                    <p>A sacred and popular pilgrimage site located in the Mustang district, highly revered by both Hindus and Buddhists alike.</p>
+                </div>
+            </section>
+
+            <!-- Column 2: Trekking Destinations -->
+            <section class="column card">
+                <h2>🥾 Trekking Destinations</h2>
+                
+                <div class="place-item">
+                    <img src="https://images.unsplash.com/photo-1585141973474-05bf99201f16?auto=format&fit=crop&w=400&q=80" alt="Everest Base Camp" class="place-img">
+                    <h3>Everest Base Camp (EBC)</h3>
+                    <p>One of the most famous and adventurous trekking routes in the world, leading you directly to the base of the world's highest peak.</p>
+                </div>
+
+                <div class="place-item">
+                    <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=400&q=80" alt="Annapurna Circuit" class="place-img">
+                    <h3>Annapurna Circuit</h3>
+                    <p>An incredible trek crossing the Thorong La Pass (5,416m), packed with diverse cultural experiences and stunning alpine scenery.</p>
+                </div>
+
+                <div class="place-item">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80" alt="Langtang Valley" class="place-img">
+                    <h3>Langtang Valley</h3>
+                    <p>Located close to Kathmandu, this trek features beautiful alpine valleys, glaciers, and traditional Tamang culture.</p>
+                </div>
+            </section>
+
+            <!-- Column 3: Weather Guide (Interactive Click Section) -->
+            <section class="column card weather-column">
+                <h2>🌤️ Weather Guide</h2>
+                <p class="weather-intro">Click on any season below to see the best travel information for Nepal:</p>
+                
+                <div class="weather-btn" onclick="showWeather('spring')">🌸 Spring (Mar - May)</div>
+                <div class="weather-btn" onclick="showWeather('monsoon')">🌧️ Monsoon (Jun - Sep)</div>
+                <div class="weather-btn" onclick="showWeather('autumn')">🍁 Autumn (Oct - Nov)</div>
+                <div class="weather-btn" onclick="showWeather('winter')">❄️ Winter (Dec - Feb)</div>
+
+                <!-- Info Display Box -->
+                <div id="weather-info-box" class="weather-info-display">
+                    <p><em>Click a season button above to load weather guide details.</em></p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- JavaScript code for interactive weather info -->
+    <script>
+        function showWeather(season) {
+            const infoBox = document.getElementById('weather-info-box');
+            let text = "";
+
+            if(season === 'spring') {
+                text = "<h3>🌸 Spring Season (Mar - May)</h3><p>One of the best times for trekking and sightseeing. The forests come alive with blooming wild rhododendrons, and the weather is very pleasant (15°C to 25°C).</p>";
+            } else if(season === 'monsoon') {
+                text = "<h3>🌧️ Monsoon Season (Jun - Sep)</h3><p>Heavy rainfall occurs across most parts, making mountains lush and green. Trekking can be difficult due to rain, but rain-shadow regions like Mustang and Upper Dolpo are excellent to visit.</p>";
+            } else if(season === 'autumn') {
+                text = "<h3>🍁 Autumn Season (Oct - Nov)</h3><p>This is the peak trekking season in Nepal. The skies are exceptionally clear, offering spectacular mountain views. Major festivals like Dashain and Tihar also fall during this time.</p>";
+            } else if(season === 'winter') {
+                text = "<h3>❄️ Winter Season (Dec - Feb)</h3><p>High altitude areas experience freezing temperatures and heavy snowfall. However, lower regions like Pokhara, Kathmandu, and Chitwan are great for sunny days and clear morning views.</p>";
+            }
+
+            infoBox.innerHTML = text;
+            infoBox.style.display = "block";
+            infoBox.style.animation = "fadeIn 0.5s ease";
+        }
+    </script>
 </body>
 </html>

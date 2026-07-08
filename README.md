@@ -1,3 +1,3 @@
-# Git Initial Setup Commands for School PCs
-git config --global user.name "Your Name"
-git config --global user.email "your@email.com"
+
+git config --global user.name "kiran26514"
+git config --global user.email "raygoldsalve@gmail.com"
