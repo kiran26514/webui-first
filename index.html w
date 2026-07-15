@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Information About Nepal 🇳🇵</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet Map CSS (NEW) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= Hero Section ================= -->
+
+<div class="hero-background">
+
+
+<header class="hero-content">
+
+<h1>🇳🇵 Information About Nepal 🇳🇵</h1>
+
+<p class="sub-title">
+The Wonderful Journey to Beautiful, Peaceful, and Brave Nepal
+</p>
+
+<button onclick="toggleDarkMode()" class="dark-btn">
+🌙 Dark Mode
+</button>
+
+</header>
+
+
+
+<!-- ================= About Nepal ================= -->
+
+<section class="container card">
+
+<h2>About Nepal 🇳🇵</h2>
+
+<p>
+Nepal is a beautiful landlocked country located in South Asia.
+It is famous for Mount Everest, the highest mountain in the world,
+the birthplace of Gautama Buddha (Lumbini), rich culture,
+ancient temples and adventure tourism.
+</p>
+
+</section>
+
+
+
+
+<!-- ================= Interactive Map (NEW) ================= -->
+
+
+<section class="container card">
+
+<h2>🗺️ Explore Nepal Map</h2>
+
+<p>
+Click the markers to explore famous places of Nepal.
+</p>
+
+<div id="nepalMap"></div>
+
+</section>
+
+
+
+
+
+<!-- ================= Main Content ================= -->
+
+
+<main class="container main-grid">
+
+
+
+<!-- Places -->
+
+<section class="column card">
+
+
+<h2>📍 Places to Visit</h2>
+
+
+
+<div class="place-item">
+
+<a href="https://maps.google.com/?q=Kathmandu,Nepal" target="_blank">
+
+<img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=400&q=80"
+class="place-img"
+alt="Kathmandu">
+
+</a>
+
+
+<h3>
+<a class="map-link"
+href="https://maps.google.com/?q=Kathmandu,Nepal"
+target="_blank">
+
+📍 Kathmandu
+
+</a>
+</h3>
+
+
+<p>
+Capital city of Nepal famous for Durbar Squares,
+Pashupatinath Temple and Swayambhunath.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="place-item">
+
+
+<a href="https://maps.google.com/?q=Pokhara,Nepal" target="_blank">
+
+<img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=400&q=80"
+class="place-img"
+alt="Pokhara">
+
+</a>
+
+
+<h3>
+<a class="map-link"
+href="https://maps.google.com/?q=Pokhara,Nepal"
+target="_blank">
+
+📍 Pokhara
+
+</a>
+</h3>
+
+
+<p>
+Beautiful lakeside city with Annapurna mountain views.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="place-item">
+
+
+<a href="https://maps.google.com/?q=Muktinath,Nepal" target="_blank">
+
+<img src="https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=400&q=80"
+class="place-img"
+alt="Muktinath">
+
+</a>
+
+
+<h3>
+<a class="map-link"
+href="https://maps.google.com/?q=Muktinath,Nepal"
+target="_blank">
+
+📍 Muktinath
+
+</a>
+</h3>
+
+
+<p>
+A sacred pilgrimage site for Hindus and Buddhists.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- Trekking -->
+
+<section class="column card">
+
+
+<h2>🥾 Trekking Destinations</h2>
+
+
+
+<div class="place-item">
+
+<img src="https://images.unsplash.com/photo-1585141973474-05bf99201f16?auto=format&fit=crop&w=400&q=80"
+class="place-img"
+alt="Everest">
+
+
+<h3>
+🏔️ Everest Base Camp
+</h3>
+
+
+<p>
+World famous trekking route to the base of Mount Everest.
+</p>
+
+</div>
+
+
+
+
+
+<div class="place-item">
+
+<img src="https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=400&q=80"
+class="place-img"
+alt="Annapurna">
+
+
+<h3>
+🏔️ Annapurna Circuit
+</h3>
+
+
+<p>
+Amazing trek with mountains, villages and cultural experiences.
+</p>
+
+</div>
+
+
+
+
+
+<div class="place-item">
+
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80"
+class="place-img"
+alt="Langtang">
+
+
+<h3>
+🏔️ Langtang Valley
+</h3>
+
+
+<p>
+Beautiful valley with glaciers and Tamang culture.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Weather -->
+
+
+<section class="column card">
+
+
+<h2>🌤️ Weather Guide</h2>
+
+
+<p>
+Click season to see travel information.
+</p>
+
+
+
+<button class="weather-btn"
+onclick="showWeather('spring')">
+
+🌸 Spring
+
+</button>
+
+
+<button class="weather-btn"
+onclick="showWeather('monsoon')">
+
+🌧️ Monsoon
+
+</button>
+
+
+<button class="weather-btn"
+onclick="showWeather('autumn')">
+
+🍁 Autumn
+
+</button>
+
+
+<button class="weather-btn"
+onclick="showWeather('winter')">
+
+❄️ Winter
+
+</button>
+
+
+
+
+<div id="weather-info-box"
+class="weather-info-display">
+
+</div>
+
+
+
+<button class="weather-btn"
+onclick="showTip()">
+
+💡 Travel Tip
+
+</button>
+
+
+<div id="tipBox"
+class="weather-info-display">
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+
+
+<!-- ================= Nepal Facts ================= -->
+
+
+<section class="container card">
+
+
+<h2>📚 Nepal Facts</h2>
+
+
+<ul>
+
+<li>Capital: Kathmandu</li>
+
+<li>Currency: Nepalese Rupee</li>
+
+<li>Highest Peak: Mount Everest</li>
+
+<li>National Flower: Rhododendron</li>
+
+<li>Birthplace of Buddha: Lumbini</li>
+
+</ul>
+
+
+</section>
+
+
+
+
+
+
+<footer class="footer">
+
+
+<p>
+© 2026 Information About Nepal 🇳🇵
+</p>
+
+
+</footer>
+
+
+
+</div>
+
+
+
+
+<!-- Leaflet Map JS -->
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+<!-- Main JavaScript -->
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>
