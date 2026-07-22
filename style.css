@@ -1,94 +1,315 @@
-/* ============== Mountain Side Background (NEW) ============== */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-.hero-background {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-    min-height:100vh;
+html {
+    scroll-behavior: smooth;
+}
 
-    position:relative;
+body {
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
 
-    overflow:hidden;
+/* ================= NAVBAR ================= */
 
-    padding-bottom:50px;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0d6efd;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+nav button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
 
     background:
+        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80");
 
-    linear-gradient(
-        90deg,
-        rgba(255,255,255,0.90),
-        rgba(255,255,255,0.75)
-    ),
+    background-size: cover;
+    background-position: center;
+}
 
-    url("https://images.unsplash.com/photo-1544735716-392fe2489ffa");
+.hero h1 {
+    font-size: 60px;
+}
 
-    background-size:cover;
+.hero p {
+    margin: 20px 0;
+    font-size: 22px;
+}
 
-    background-position:center;
+.btn {
+    text-decoration: none;
+    color: white;
+    background: #ff9800;
+    padding: 14px 30px;
+    border-radius: 30px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #ff6d00;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0d6efd;
+}
+
+/* ================= SEARCH ================= */
+
+#search {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+/* ================= MAP ================= */
+
+#map {
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.place-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+    transition: .3s;
+}
+
+.place-item:hover {
+    transform: translateY(-8px);
+}
+
+.place-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.place-item h3 {
+    padding: 15px;
+}
+
+.place-item p {
+    padding: 0 15px 20px;
+}
+
+/* ================= WEATHER ================= */
+
+button {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #0d6efd;
+    color: white;
+    transition: .3s;
+}
+
+button:hover {
+    background: #084298;
+}
+
+#weather,
+#tip {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+}
+
+/* ================= GALLERY ================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= CONTACT ================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin: 12px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+form button {
+    width: 200px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ================= DARK MODE ================= */
+
+.dark {
+    background: #111;
+    color: white;
+}
+
+.dark .place-item {
+    background: #222;
+    color: white;
+}
+
+.dark #weather,
+.dark #tip {
+    background: #222;
+    color: white;
+}
+
+.dark input,
+.dark textarea {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
 
 }
 
-
-/* Left & Right Mountain Effect */
-
-.hero-background::before {
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:0;
-
-    width:250px;
-
-    height:100%;
-
-
-    background-image:
-
-    url("https://images.unsplash.com/photo-1544735716-392fe2489ffa");
-
-
-    background-size:cover;
-
-    background-position:left center;
-
-
-    opacity:0.8;
-
-    z-index:-1;
-
-}
-
-
-
-.hero-background::after {
-
-    content:"";
-
-    position:absolute;
-
-    right:0;
-
-    top:0;
-
-    width:250px;
-
-    height:100%;
-
-
-    background-image:
-
-    url("https://images.unsplash.com/photo-1528164344705-47542687000d");
-
-
-    background-size:cover;
-
-    background-position:right center;
-
-
-    opacity:0.8;
-
-    z-index:-1;
-
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
